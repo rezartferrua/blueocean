@@ -3,13 +3,13 @@ pipeline {
   stages {
     stage('Buzz Build') {
       steps {
-        sh '/var/lib/jenkins/sh/build.sh'
+        sh '/home/rezart/Downloads/training-core-fundamentals-sample-1/jenkins/build.sh'
       }
     }
 
     stage('Buzz Test') {
       steps {
-        sh '/var/lib/jenkins/sh/test-all.sh'
+        sh '/home/rezart/Downloads/training-core-fundamentals-sample-1/jenkins/test-all.sh'
       }
     }
 
