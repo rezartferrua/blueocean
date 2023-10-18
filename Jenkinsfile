@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('buzz buzz') {
       steps {
-        echo 'bzzzzzzzz'
+        sh 'echo My nane is $BUSY_BEE'
       }
     }
 
@@ -11,9 +11,11 @@ pipeline {
       steps {
         echo 'perrperrperr'
         echo 'zzzzzzzb'
-        junit '**/surefire-reports/**/*.xml'
       }
     }
 
+  }
+  environment {
+    BUSY_BEE = 'Working Bee'
   }
 }
