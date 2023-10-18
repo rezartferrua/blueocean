@@ -4,6 +4,7 @@ pipeline {
     stage('buzz buzz') {
       steps {
         echo 'bzzzzzzzz'
+        archiveArtifacts(artifacts: 'target/*.jar', fingerprint: true)
       }
     }
 
