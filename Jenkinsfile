@@ -12,6 +12,7 @@ pipeline {
       steps {
         echo 'perrperrperr'
         echo 'zzzzzzzb'
+        junit '**/surefire-reports/**/*.xml'
       }
     }
 
