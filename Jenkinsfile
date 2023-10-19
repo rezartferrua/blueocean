@@ -14,6 +14,12 @@ pipeline {
       }
     }
 
+    stage('Deploy to stage') {
+      steps {
+        input 'Deploy to stage?'
+      }
+    }
+
   }
   environment {
     BUSY_BEE = 'Working Bee'
