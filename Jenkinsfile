@@ -10,7 +10,7 @@ pipeline {
     stage('bee bee') {
       post {
         success {
-          archiveArtifacts 'target/*.jar'
+          archiveArtifacts './target/*.jar'
           stash(name: 'Java 7', includes: 'target/**')
         }
 
