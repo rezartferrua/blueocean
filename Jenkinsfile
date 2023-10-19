@@ -2,18 +2,14 @@ pipeline {
   agent none
   stages {
     stage('buzz buzz') {
-      agent {
-        label 'bzezezzz'
-      }
+      agent any
       steps {
         sh 'echo My nane is $BUSY_BEE'
       }
     }
 
     stage('bee bee') {
-      agent {
-        label 'bzzzz'
-      }
+      agent any
       steps {
         echo 'perrperrperr'
         echo 'zzzzzzzb'
