@@ -8,6 +8,13 @@ pipeline {
     }
 
     stage('bee bee') {
+      post {
+        success {
+          archiveArtifacts 'target/*.jar'
+          stash(name: 'Java 7', includes: 'target/**')
+        }
+
+      }
       steps {
         echo 'perrperrperr'
         echo 'zzzzzzzb'
@@ -15,6 +22,9 @@ pipeline {
     }
 
     stage('Deploy to stage') {
+      when {
+        branch 'master'
+      }
       steps {
         input 'Deploy to stage?'
       }
