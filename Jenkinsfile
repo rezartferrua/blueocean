@@ -14,7 +14,7 @@ pipeline {
       steps {
         echo 'perrperrperr'
         echo 'zzzzzzzb'
-        stash(name: 'more_stashed_files', includes: 'target/**')
+        unstash 'stashed_files'
       }
     }
 
