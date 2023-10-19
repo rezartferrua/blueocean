@@ -24,4 +24,7 @@ sudo touch ./target/dummy.du'''
   environment {
     BUSY_BEE = 'Working Bee'
   }
+  options {
+    preserveStashes()
+  }
 }
