@@ -7,7 +7,6 @@ pipeline {
         sh '''sudo mkdir ./target
 sudo touch ./target/dummy.dum'''
         sh 'echo My nane is $BUSY_BEE'
-        stash(name: 'stashed_filess', includes: 'target/**')
       }
     }
 
