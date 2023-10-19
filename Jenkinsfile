@@ -5,7 +5,7 @@ pipeline {
       agent any
       steps {
         sh '''sudo mkdir ./target
-sudo touch ./target/dummy.du'''
+sudo touch ./target/dummy.dum'''
         sh 'echo My nane is $BUSY_BEE'
         stash(name: 'stashed_files', includes: 'target/**')
       }
