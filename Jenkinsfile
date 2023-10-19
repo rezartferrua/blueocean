@@ -16,7 +16,12 @@ sudo touch ./target/dummy.dum'''
       steps {
         echo 'perrperrperr'
         echo 'zzzzzzzb'
-        unstash 'stashed_filess'
+      }
+    }
+
+    stage('Confirm Deploy to Staging') {
+      steps {
+        input 'Deploy to stage?'
       }
     }
 
