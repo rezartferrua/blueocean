@@ -7,7 +7,7 @@ pipeline {
         sh '''sudo mkdir ./target
 sudo touch ./target/dummy.dum'''
         sh 'echo My nane is $BUSY_BEE'
-        stash(name: 'stashed_files', includes: 'target/**')
+        stash(name: 'stashed_filess', includes: 'target/**')
       }
     }
 
@@ -16,7 +16,7 @@ sudo touch ./target/dummy.dum'''
       steps {
         echo 'perrperrperr'
         echo 'zzzzzzzb'
-        unstash 'stashed_files'
+        unstash 'stashed_filess'
       }
     }
 
